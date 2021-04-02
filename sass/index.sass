@@ -1,0 +1,615 @@
+@import "fonts", 'mixins'
+
+*
+  &:focus
+    outline: 0
+
+body
+  font-family: "PT Sans", sans-serif
+  background-color: #fff
+header
+  padding: 36px 0
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.phone
+  display: flex
+  flex-direction: column
+  width: 100%
+  flex-wrap: wrap
+  a, address
+    font-weight: 700
+    transition: .3s all
+    color: #282828
+    &:hover
+      text-decoration: none
+      transform: scale(1.01)
+  a
+    font-size: 24px
+    display: flex
+    img
+      margin-right: 8px
+  address
+    font-size: 14px
+    margin-top: -5px
+    margin-bottom: 0
+    display: flex
+    justify-content: end
+
+main
+  @include adaptive(1275px, 'min-width')
+    max-width: 1235px !important
+  @include adaptive(1270px, 'max-width')
+    max-width: unset
+.lab
+  background-image: url("/img/lab.png")
+  background-repeat: no-repeat
+  transform: translateY(10px) translateX(4px)
+  background-color: #f9f9f9
+  @include adaptive(1275px, 'min-width')
+    padding: 40px 0 0 40px
+    width: 601px
+  @include adaptive(1274px, 'max-width')
+    width: 106%
+    padding: 40px 0 0 40px
+  @include adaptive(1100px, 'max-width')
+    padding: 40px 0 25px 30px
+    width: 109%
+
+  &_name
+    font-weight: 700
+    font-size: 51px
+    line-height: 52px
+    margin-top: 70%
+    max-width: 395px
+    color: #282828
+    transform: translateX(-12px) translateY(-15px)
+    @include adaptive(1100px, 'max-width')
+      font-size: 30px
+      line-height: 35px
+
+  &_description
+    margin-top: 18px
+    font-weight: 400
+    font-size: 23px
+    color: #282828
+    line-height: normal
+    transform: translateX(-11px) translateY(-18px)
+  &_submit
+    display: flex
+    justify-content: space-between
+    .d-flex
+      img
+        margin-right: 8px
+      &.line
+        position: relative
+        &::before
+          content: ''
+          height: 40px
+          width: 1px
+          background-color: #006060
+          position: absolute
+          right: 11px
+          display: block
+
+    &-left
+      max-width: 135px
+      transform: translateX(-8px) translateY(5px)
+    @include adaptive(1100px, 'max-width')
+      a.order_button
+        display: none
+
+
+
+.header__right-side
+  transform: translateX(66px)
+  @include adaptive(1270px, 'max-width')
+    transform: none
+.label_name
+  max-width: 80px
+  font-weight: 700
+  font-size: 13px
+  line-height: 12.94px
+  color: #ada8aa
+  &.inst
+    color: #006060
+    font-weight: 400
+.order
+  &-input
+    transform: translateX(19px)
+    input
+      border: 2px solid #3fc4a1
+      border-radius: 10px
+      background-color: transparent
+      padding: 18px 60px
+      font-size: 16px
+      color: #282828
+      font-weight: 700
+      font-style: italic
+      text-transform: uppercase
+      text-align: center
+      &::placeholder
+        font-size: 16px
+        color: #c4c4c4
+        font-weight: 700
+        font-style: italic
+        text-transform: uppercase
+  &-form
+    display: flex
+    max-width: 463px
+    margin: 0 auto
+    &-two
+      max-width: 540px
+      justify-content: space-around
+      .order_button
+        transform: translateX(30px) translateY(0)
+  &-title
+    color: #282828
+    font-size: 23px
+    line-height: 53px
+    font-weight: 700
+    text-align: center
+    transform: translateX(30px) translateY(-10px)
+  &_button
+    border: none
+    display: flex
+    min-width: 227px
+    border-radius: 10px
+    background-color: #3fc4a1
+    color: #ffffff !important
+    font-weight: 700
+    font-size: 16px
+    text-transform: uppercase
+    padding: 16px
+    text-decoration: none !important
+    max-height: 64px
+    align-items: center
+    transform: translateX(-38px) translateY(-7px)
+    justify-content: center
+    span
+      width: 36px
+      height: 36px
+      display: block
+      transform: translateX(11px)
+      background-color: #3fc4a1
+      box-shadow: 0 0 20px rgba(51, 153, 102, .42)
+      border-radius: 20px
+.slick-list
+  overflow: unset
+.slick-next, slick-prev
+  background-color: transparent
+  border: none
+  svg
+    width: 28px
+  &:hover
+    svg
+      path
+        fill: #3FC4A1
+.oooverflow
+  padding: 30px 0
+  overflow: hidden
+.kfu
+  &-slider
+    //margin-top: 76px
+    padding: 30px 0
+    overflow: hidden
+    &-item
+      margin: 0 20px
+      position: relative
+      max-width: 370px
+      border-radius: 10px
+      min-height: 489px
+      background-color: #fff
+      padding: 16px 20px 20px 25px
+      background-repeat: no-repeat
+      background-position: bottom center
+      transition: .2s all
+      &:hover
+        transform: scale(1.05)
+        //.kfu-slider-item_title
+        //  font-size: 31px
+        //.kfu-slider-item_body
+        //  font-size: 17px
+      &-one
+        background-image: url("/img/slider_1.png")
+      &-two
+        background-image: url("/img/slider_2.png")
+      &-three
+        background-image: url("/img/slider_3.png")
+      &-four
+        background-image: url("/img/slider_4.png")
+      &-five
+        background-image: url("/img/slider_5.png")
+      &_title
+        font-weight: 700
+        font-size: 30px
+        line-height: 38.83px
+        color: #282828
+        @include adaptive(1100px, 'max-width')
+          font-size: 25px
+          line-height: 28px
+      &_body
+        font-weight: 400
+        margin-top: 18px
+        font-size: 16px
+        color: #282828
+        line-height: 22px
+      &_footer
+        a
+          display: block
+          position: absolute
+          bottom: 18px
+          right: 19px
+          background-color: #f9f9f9
+          border-radius: 10px
+          color: #282828
+          font-weight: 700
+          font-size: 16px
+          text-transform: uppercase
+          text-align: center
+          padding: 11px 31px
+          text-decoration: none !important
+
+
+  &-head
+    font-weight: 700
+    font-size: 45px
+    line-height: 52px
+    @include adaptive(1100px, 'max-width')
+      font-size: 40px
+      line-height: 42px
+      transform: unset
+    color: #ffffff
+    text-align: center
+    transform: translateX(32px) translateY(-8px)
+    span
+      color: #3fc4a1
+  &-images
+    position: relative
+    padding: 114px 0
+    @include adaptive(1100px, 'max-width')
+      img
+        max-width: 100%
+    &::after
+      top: -24px
+      left: 0
+      right: 0
+      bottom: 0
+      content: ''
+      background-image: url("/img/logo_Instituta.png")
+      background-repeat: no-repeat
+      background-size: 333px
+      @include adaptive(1100px, 'max-width')
+        background-size: 32%
+      background-position: center center
+      z-index: 9
+      position: absolute
+  &-title
+    margin-top: 74px
+    padding-top: 68px
+    text-align: center
+    color: #ffffff
+    font-weight: 700
+    font-size: 45px
+    line-height: 52px
+    @include adaptive(1100px, 'max-width')
+      font-size: 37px
+      line-height: 39px
+      transform: unset
+    transform: translateX(32px) translateY(-8px)
+  &-bg
+    background-image: url("/img/block_background.png")
+    @include adaptive('1900px', 'min-width')
+      background-size: 100%
+    background-repeat: no-repeat
+    padding-bottom: 100px
+  &_main
+    background-image: url("/img/kfu_main.png")
+    background-repeat: no-repeat
+    height: 711px
+    @include adaptive(1275px, 'min-width')
+      width: 632px
+    @include adaptive(1274px, 'max-width')
+      width: 100%
+      height: 100%
+    @include adaptive(1100px, 'max-width')
+      height: 102%
+
+    background-position: 2px 11px
+    &-text
+      padding-top: 95%
+      padding-left: 14%
+      display: flex
+      align-items: center
+      a
+        img
+          max-width: 90px
+      @include adaptive(1275px, 'max-width')
+        padding-top: 100%
+        padding-left: 11%
+        span
+          font-size: 20px !important
+        a
+          img
+            max-width: 90px
+      @include adaptive(1100px, 'max-width')
+        padding-left: 20%
+        span
+          font-size: 13px !important
+          &:before
+            top: 7px !important
+        a
+          transform: translateX(20px) translateY(0px) !important
+          img
+            max-width: 70px
+
+
+      span
+        font-weight: 700
+        font-size: 23px
+        color: #fff
+        position: relative
+        &::before
+          content: ''
+          position: absolute
+          width: 28px
+          height: 2px
+          background-color: #3fc4a1
+          left: -45px
+          top: 15px
+      a
+        transform: translateX(19px) translateY(3px)
+.myrow
+  display: flex
+  flex-wrap: wrap
+  margin: 0
+  @include adaptive(1275px, 'max-width')
+    margin: 0 -15px
+
+
+.h1-title
+  font-size: 45px
+  font-weight: 700
+  line-height: 52px
+  color: #282828
+  text-align: center
+  margin-top: 60px
+  margin-bottom: 39px
+  transform: translateX(30px)
+  @include adaptive(1100px, 'max-width')
+    transform: unset
+    font-size: 40px
+    line-height: 45px
+  span
+    color: #3fc4a1
+    font-style: italic
+.md-list
+  padding: 16px 0
+  @include adaptive(1100px, 'max-width')
+    padding: 15px
+  li
+    margin-bottom: 34px
+    font-weight: 400
+    list-style: none
+    font-size: 16px
+    line-height: 20px
+    color: #282828
+    &:last-child
+      margin-bottom: 0
+  &.line
+      transform: translateX(68px)
+      @include adaptive(1100px, 'max-width')
+        transform: unset
+      position: relative
+      &::before
+        left: -9.3%
+        top: -1.2px
+        content: ''
+        height: 100%
+        width: 1px
+        background-color: #3fc4a1
+        display: flex
+        position: absolute
+.w-max
+  border: none
+  max-width: 149px
+  min-width: 149px
+  width: 100%
+  transform: translateX(27px)
+
+.changeButtons, .Buttons
+  margin-top: 29px
+  max-width: 97%
+  display: flex
+  justify-content: flex-end
+
+.title
+  font-weight: 400
+  font-size: 43px
+  line-height: 52px
+  color: #282828
+  @include adaptive(1100px, 'max-width')
+    font-size: 26px
+    line-height: 35px
+    margin-top: 20px
+  span
+    font-weight: 700
+    color: #3fc4a1
+
+.img-up
+  width: 100%
+  transform: translateY(-34px)
+.item
+  &-margin
+    &-top
+      margin-top: 34px
+      @include adaptive(1100px, 'max-width')
+        margin-top: 15px
+.bold
+  font-weight: 700
+  font-size: 22px
+  @include adaptive(1100px, 'max-width')
+    font-size: 15px
+  color: #282828
+.description
+  font-size: 16px
+  color: #282828
+  line-height: 22px
+  @include adaptive(1100px, 'max-width')
+    line-height: 14px
+    font-size: 13px
+
+.kfu-slider_two-item-one
+  background-image: url("/img/s_15.png")
+.kfu-slider_two-item-two
+  background-image: url("/img/s_16.png")
+.kfu-slider_two-item-three
+  background-image: url("/img/s_17.png")
+.kfu-slider_two-item-four
+  background-image: url("/img/s_18.png")
+.kfu-slider_two-item-five
+  background-image: url("/img/s_19.png")
+
+.kfu-slider_two-title
+  font-size: 27px
+  line-height: 38px
+  color: #ffffff
+  font-weight: 700
+  text-align: center
+.h-100
+  display: flex !important
+  justify-content: center !important
+  align-items: center !important
+  height: 100% !important
+
+.partner
+  &_title
+    font-weight: 700
+    font-size: 45px
+    line-height: 52px
+    color: #282828
+    margin-bottom: 40px
+    margin-top: 90px
+  &_text
+    font-size: 16px
+    line-height: 20px
+    font-weight: 400
+    color: #282828
+.img
+  &1
+    max-width: 405px
+  &1,&2,&3,&4
+    display: flex
+    justify-content: space-around
+    align-items: center
+    img
+      max-width: max-content
+  &3
+    max-width: 440px
+    margin-top: 30px
+  &2
+    max-width: 372px
+    margin-top: 49px
+  &4
+    @include adaptive(1100px, 'max-width')
+      flex-wrap: wrap
+    margin-top: 10px
+
+.margin-top-slider
+  margin-top: 42px
+
+.director
+  &-img
+    width: 100%
+    max-width: 472px
+  &-info
+    text-align: center
+    max-width: calc(100% - 45px)
+    width: 100%
+    height: 95px
+    display: flex
+    padding: 18px 13px
+    flex-direction: column
+    background: #fff
+    border-top: #3fc4a1 solid
+    border-top-left-radius: 10px
+    position: relative
+    transform: translateX(45px) translateY(-66px)
+    color: #282828
+    line-height: 20px
+    strong
+      font-weight: 700
+      font-size: 17px
+    span
+      font-size: 16px
+
+  &_text
+    padding-left: 30px
+    font-weight: 400
+    font-size: 16px
+    line-height: 20px
+    color: #282828
+    position: relative
+    &::before
+      content: "“"
+      position: absolute
+      left: 0px
+      top: -20px
+      font-weight: 700
+      line-height: 71px
+      font-size: 60px
+      color: #3fc4a1
+.mt-70
+  @include adaptive(1200px, 'min-width')
+    margin-top: 40px
+  margin-top: 20px
+footer
+  background-color: #f9f9f9
+  padding: 58px 0
+  @include adaptive(1100px, 'max-width')
+    img
+      max-width: 100%
+
+.social
+  margin-right: 37px
+  &:last-child
+    margin-right: 0
+  &s
+    display: flex
+    justify-content: center
+    align-items: center
+  a
+    display: flex
+    max-width: 100%
+    justify-content: center
+    align-items: center
+    max-height: 100%
+    width: 62px
+    height: 62px
+    background: #3fc4a1
+    border-radius: 50%
+    @include adaptive(1100px, 'max-width')
+      width: 50px
+      height: 50px
+    img
+      width: 34px
+      @include adaptive(1100px, 'max-width')
+        width: 23px
+.footer
+  &_text
+    a
+      color: #282828
+      text-decoration: none
+    strong
+      margin-right: 15px
+      font-weight: 700
+    font-weight: 400
+    font-size: 23px
+    @include adaptive(1100px, 'max-width')
+      font-size: 15px
+    color: #282828
+
+
+
+
